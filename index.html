@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMCabs Collection</title>
+    <link rel="icon" href="BM Cabs.jpeg">
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <center><h1>Collection</h1></center>
+    <div>
+        <h3>Collection:</h3>
+        <input id="col"><br>
+        <h3>Net Earning:</h3>
+        <input id="net"><br>
+        <h3>Outstation Net:</h3>
+        <input id="outnet"><br>
+        <h3>Fuel:</h3>
+        <input id="fuel"><br>
+        <button onclick="ca()">Calculate</button><br>
+        <h3>Salary:</h3>
+        <p id="sal">.....</p><br>
+        <h3>Balance:</h3>
+        <p id="bal">.....</p>
+    </div>
+    <script>
+        var col = document.getElementById("col")
+        var net = document.getElementById("net")
+        var fuel = document.getElementById("fuel")
+        var sal = document.getElementById("sal")
+        var outnet = document.getElementById("outnet")
+        function ca(){
+              var x=col.value
+              var y=net.value
+              var z=fuel.value
+              var a=outnet.value
+              var b=y-a
+              var dsal=(b*(30/100))+(a*(25/100))
+              var dbal=x-dsal-z
+              sal.textContent=dsal
+              bal.textContent=dbal
+                    
+        }
+    </script>
+</body>
+</html>
